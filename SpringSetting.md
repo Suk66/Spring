@@ -17,7 +17,12 @@
 
 ##STS Configration, 
 - #0. Java installed JREs
-- 
+
+#JAVA_HOME
+C:\Program Files\Java\jdk-11
+
+#Path
+C:\Program Files\Java\jdk-11\bin
 
 
   
