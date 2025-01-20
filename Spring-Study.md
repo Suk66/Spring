@@ -20,4 +20,28 @@
 	}
 }
 
+```java
+public class Hello {
+    public static void main(String[] args) {
+        System.out.println("Hello, Markdown!");
+    }
+}
+
+> **📌 새 코드 시작!**
+```java
+System.out.println("New Code Here!");
+
+# 📌 새 코드 시작!
+
+```python
+print("Hello, Python!")
+
+
+| 코드 | 설명 |
+|------|------|
+| ```java public class Hello { System.out.println("Hello!"); }``` | Java Hello World 예제 |
+| ```python print("Hello, Python!")``` | Python Hello World 예제 |
+
+
+
 
