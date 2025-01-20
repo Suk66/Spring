@@ -2,7 +2,7 @@
 **스프링 설정 내역**
 #JDK17을 지우지 않고 11을 지정하는 방법.
 
-###Download
+**#Download**
  - spring-tool-suite-3.9.18.RELEASE-e4.21.0-win32-x86_64
       -vm
       C:\Program Files\Java\jdk-11.exe
