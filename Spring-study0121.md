@@ -35,6 +35,34 @@ public class AppleSpeaker implements Speaker {
 ```
 
 
+***생성자3***
+#1-1
+```java
+public SamsungTV(Speaker speaker) {
+		System.out.println("==> SamsungTV(2) 생성");
+		this.speaker = speaker;
+	}
+	
+	public SamsungTV(Speaker speaker, int price) {
+		System.out.println("==> SamsungTV(3) 생성");
+		this.speaker = speaker;
+		this.price = price;
+	}
+```
+
+```java
+#1-2
+<bean id="speaker" class="com.spring.injection.SonySpeaker" />
+	
+	<bean id="tv" class="com.spring.injection.SamsungTV">
+		<constructor-arg value="1500000" />
+		<constructor-arg ref="speaker" />	
+	</bean>
+</beans>
+```
+
+
+
 
 
 -setter 메서드를 이용해서 주입
