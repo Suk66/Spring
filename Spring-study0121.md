@@ -15,11 +15,11 @@ public SamsungTV(SonySpeaker speaker) {
 	}
 ```
 
-***SamsungTV와 AplleTV를 인터페이스로 동시에 사용하는 방법.
-#인터페이스로 만들 시 xml 파일로 쉽게 통제가 가능.
-```java
-package com.spring.injection;
+***SamsungTV와 AplleTV를 인터페이스로 동시에 사용하는 방법***
 
+# 💎 인터페이스로 만들 시
+	-xml 파일로 쉽게 통제가 가능.
+```java
 public class AppleSpeaker implements Speaker {
 	
 	public AppleSpeaker() {
