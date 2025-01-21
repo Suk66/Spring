@@ -66,5 +66,13 @@ public SamsungTV(Speaker speaker) {
 
 
 
--setter 메서드를 이용해서 주입
+***setter 메서드를 이용해서 주입***
 
+#1-3
+```java
+<!--  setter() 메서드를 이용한 주입 -->
+		<bean id="tv" class="com.spring.injection.SamsungTV">
+			<property name="speaker" ref="speaker" />
+			<property name="price" value="1500000" />
+		</bean>
+```
