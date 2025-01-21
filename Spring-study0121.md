@@ -50,8 +50,9 @@ public SamsungTV(Speaker speaker) {
 	}
 ```
 
-```java
+
 #1-2
+```java
 <bean id="speaker" class="com.spring.injection.SonySpeaker" />
 	
 	<bean id="tv" class="com.spring.injection.SamsungTV">
