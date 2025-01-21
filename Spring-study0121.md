@@ -79,3 +79,50 @@ public SamsungTV(Speaker speaker) {
 			<property name="price" value="1500000" />
 		</bean>
 ```
+
+
+
+***스프링에서 안 좋아하는 방법CollectionBean***
+
+# 1-1
+```java
+public class CollectionBean {
+
+	private String[] addressList = {"공덕동", "대흥동", "합정동"};
+
+	public String[] getAddressList() {
+		return addressList;
+	}
+
+	public void setAddressList(String[] addressList) {
+		this.addressList = addressList;
+	}
+}
+```
+
+```java
+public static void main(String[] args) {
+		GenericXmlApplicationContext container =
+				new GenericXmlApplicationContext("applicationContext.xml");
+		
+		// 컨테이너로부터 사용한 객체를 lookup 하자.
+		CollectionBean bean = container.getBean("collection", CollectionBean.class);
+		
+		String[] addressList = bean.getAddressList();
+		
+		for(String address : addressList) {
+			
+			System.out.print(address + "\t");
+		}
+		
+		System.out.println();
+		
+		// 콘테이너 종료.
+		container.close();
+	}
+```
+
+
+
+
+
