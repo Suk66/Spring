@@ -122,6 +122,11 @@ public static void main(String[] args) {
 	}
 ```
 
+***스프링에서 좋아하는 방법***
+private String[] addressList; 
+	=직접리스트를 {" value, value, value"} 하는 방식은 주소값이 지워지면 없어지고 수정도 어렵기 때문에 스프링이 좋아하지 않음.
+ 하여 xml을 이용하여 제어함.
+
 
 
 
