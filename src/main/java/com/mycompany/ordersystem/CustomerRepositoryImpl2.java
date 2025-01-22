@@ -5,12 +5,12 @@ import org.springframework.stereotype.Repository;
 import java.util.ArrayList;
 import java.util.List;
 
-//@Repository("CustomerRepository")
-public class CustomerRepositoryImpl implements CustomerRepository {
+@Repository("CustomerRepository")
+public class CustomerRepositoryImpl2 implements CustomerRepository {
 
     private List<Customer> customers;
 
-    public CustomerRepositoryImpl() {
+    public CustomerRepositoryImpl2() {
         customers = new ArrayList<>();
 
         Customer customer = new Customer();

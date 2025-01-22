@@ -1,7 +1,10 @@
 package com.mycompany.ordersystem;
 
+import org.springframework.stereotype.Service;
+
 import java.util.List;
 
+@Service("customerService")
 public class CustomerServiceImpl implements CustomerService {
 
     private CustomerRepository customerRepository;
@@ -21,7 +24,7 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public List<Customer> getCustomerByName(String name) {
+    public List<Customer> getCustomersByName(String name) {
         return customerRepository.findByName(name);
     }
 

@@ -6,11 +6,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 //@Repository("CustomerRepository")
-public class CustomerRepositoryImpl implements CustomerRepository {
+public class CustomerRepositoryImpl3 implements CustomerRepository {
 
     private List<Customer> customers;
 
-    public CustomerRepositoryImpl() {
+    public CustomerRepositoryImpl3() {
         customers = new ArrayList<>();
 
         Customer customer = new Customer();
