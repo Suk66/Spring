@@ -135,3 +135,70 @@ private String[] addressList;
 
 
 
+**Maven pom.xml추가 셋팅**
+
+ #라이브러리 미흡으로 실행 안되던 부분 해결.
+  -spring-core
+  -spring-context
+    -++ 추가사항
+    
+  -spring-beans
+  -spring-aop
+  -spring-expression
+  -common-logging
+
+
+```java
+<dependencies>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-core</artifactId>
+      <version>6.2.1</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-context</artifactId>
+      <version>6.2.1</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-beans</artifactId>
+      <version>6.2.1</version>
+    </dependency>
+
+    <!-- ✅ 추가: Spring AOP (필수) -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-aop</artifactId>
+      <version>6.2.1</version>
+    </dependency>
+
+    <!-- ✅ 추가: Spring Expression (Annotation 기반 설정 필수) -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-expression</artifactId>
+      <version>6.2.1</version>
+    </dependency>
+
+    <!-- ✅ 추가: Jakarta Commons Logging (Spring 내부 로깅) -->
+    <dependency>
+      <groupId>commons-logging</groupId>
+      <artifactId>commons-logging</artifactId>
+      <version>1.2</version>
+    </dependency>
+
+
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+```
+
+
+
+
+
