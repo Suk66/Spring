@@ -23,6 +23,9 @@
 
 #MyBatis구조도.
 [MyBatis구조도.pdf](https://github.com/user-attachments/files/18515471/MyBatis.pdf)
+![MyBatis 구조도](https://github.com/user-attachments/assets/4c2661f9-ff59-4b74-a807-6008566d5c36)
+
+
 
 
 
