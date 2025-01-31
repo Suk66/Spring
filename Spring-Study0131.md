@@ -24,7 +24,7 @@ public class AppConfig {
     ```java
     CustomerService customerService = context.getBean("⭐️스프링빈 이름⭐️", CustomerService.class(⭐️반환할 데이터타입⭐️);
 
-    CustomerService customerService = (CustomerService)context.getBean("⭐️스프링빈 이름⭐️");
+    CustomerService customerService = 😘형변환(CustomerService)context.getBean("⭐️스프링빈 이름⭐️");
 
 
   - 스프링 빈 서비스
