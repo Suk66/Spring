@@ -68,6 +68,13 @@ public class AppConfig {
      #Scope
      - singleton : 애플리케이션 컨텐스트당 단 하나의 인스턴스를 생성.
      - prototype : getBean() 메서드가 호출될 떄 마다 하나의 인스턴스를 생성.
+     ```java
+     @Scope(value = "prototype")
+     public PrototypeBean() {
+
+     <bean id="PrototypeBean" class="PrototypeBean" scope="prototype"/>
+     ```
+       
      - request   : HTTP request 영역 안에서 인스턴스 생성.
      - session   : HTTP session 영역 안에서 인스턴스 생성.
      - application : 서블릿 컨텍스트 영역 안에서 인스턴스 생성.
