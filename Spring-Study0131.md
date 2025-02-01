@@ -78,6 +78,33 @@ public class AppConfig {
      - request   : HTTP request 영역 안에서 인스턴스 생성.
      - session   : HTTP session 영역 안에서 인스턴스 생성.
      - application : 서블릿 컨텍스트 영역 안에서 인스턴스 생성.
+   
+
+**ClassPathXmlApplicationContext**
+  - FileSystemXmlApplicationContext
+  - GenericXmlApplicationContext
+    #전통적인 스프링 설정방식
+    - beans.xml에 <bean>태그로 Bean 등록
+    - <context:component-scan> 등으로 자동 스캔가능.
+      #가독성 설정이 분리되어 있어 구조파악이 용이.
+      #표준화 xml로 표준화된 설정 가능.
+      #오래된 레거시와 호환성 높음.
+      ⭐️ 코드가 길어질 수 있음 - 컴파일 시점 오류확인X
+
+
+**AnnotationConfigApplicationContext**
+  - @ComponentScan
+  - @Component, @Service, @Repository
+    #XML 없이 클래스를 스캔하여 자동으로 Bean등록 - Configuration 파일과 함께 사용 하기도 함.
+    #컴파일 시점 오류확인 가능. 간결한 코드.
+    ⭐️ 어노테이션이 분산되어 있으면 구조파악이 어려울 수 있음 - 기존 레거시(XML)와 혼용시 복잡.
+
+**@Configuration + @Bean**
+  - AnnotationConfigApplicationContext
+    #자바클래스 내부에서 @Bean 등록. - XML 완전 대체가능.
+
+
+  
      
   
     
