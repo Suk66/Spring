@@ -42,3 +42,31 @@ public class MainXML {
     }
 }
 ```
+
+**SpEL표현식**
+
+- 다른빈 속성 값 출력
+```java
+public class OtherBean {
+    @Value("다른 빈 속성")
+    private String value;
+    public String getValue() {
+        return value;
+    }
+}
+
+
+@Value("#{otherBean.value}")
+    private String otherValue;
+    public String getOtherValue() {
+        return otherValue;
+    }
+
+<main
+String otherValue = diAnnotation.getOtherValue();
+        System.out.println(otherValue);
+```
+
+
+
+
