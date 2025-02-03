@@ -3,7 +3,8 @@
 - Collection/List : <list>
 - Collection/Set : <set>
 - Map            : <map>
--Properties      : <props>
+- Properties      : <props>
+- Null            : <null/>
 
 ```java
 public class MainXML {
@@ -17,9 +18,12 @@ public class MainXML {
         Set<String> set = diBean.getSet();
         for(String s : set)
             System.out.println(s);
+
+
         Map<String, String> map = diBean.getMap();
         for (String key : map.keySet())
             System.out.printf("%s : %s\n", key, map.get(key));
+
 
         Properties properties = diBean.getProperties();
         String value1 = properties.getProperty("속성1");
@@ -28,6 +32,12 @@ public class MainXML {
         System.out.println("속성1 : " + value1);
         System.out.println("속성2 : " + value2);
         System.out.println("속성3 : " + value3);
+
+        String strNull = diBean.getStrNull();
+        if(strNull == null)
+            System.out.println("널 값이 주입되었습니다.");
+
+        
 
     }
 }
