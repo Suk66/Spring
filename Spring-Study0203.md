@@ -21,6 +21,14 @@ public class MainXML {
         for (String key : map.keySet())
             System.out.printf("%s : %s\n", key, map.get(key));
 
+        Properties properties = diBean.getProperties();
+        String value1 = properties.getProperty("속성1");
+        String value2 = properties.getProperty("속성2");
+        String value3 = properties.getProperty("속성3");
+        System.out.println("속성1 : " + value1);
+        System.out.println("속성2 : " + value2);
+        System.out.println("속성3 : " + value3);
+
     }
 }
 ```
