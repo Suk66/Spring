@@ -67,6 +67,75 @@ String otherValue = diAnnotation.getOtherValue();
         System.out.println(otherValue);
 ```
 
+**application.properties**
+- priority = high
+- values=value1,value2,value3
+- maps={key1:'1',key2:'2',key3:'3'}
+
+  #값을 이곳에 설정해 놓고 가져다 씀.
+
+```java
+@Value("${priority:normal}")    // 프로퍼티 설정 안해놓고 이곳에서 노말주면 기본값 노말 출력.
+    private String priority;
+    public String getPriority() {
+        return priority;
+    }
+<main
+    String priority = diAnnotation.getPriority();
+        System.out.println(priority);
+
+
+@Value("${values}")
+    private String[] array;
+    public String[] getArray() {
+        return array;
+    }
+<main
+    String[] array = diAnnotation.getArray();
+        for(String s : array)
+            System.out.println(s);
+
+@Value("#{${maps}}")
+    private Map<String, Integer> map;
+    public  Map<String, Integer> getMap() {
+        return map;
+    }
+<main
+    Map<String, Integer> map = diAnnotation.getMap();
+        for(String key : map.keySet())
+            System.out.printf("%s : %d\n", key, map.get(key));
+
+```
+
+
+#조금 더 심화(?)
+```java
+@Value("#{'${values}'.split(',')}")
+    private List<String> list;
+
+    public List<String> getList() {
+        return list;
+    }
+<main
+    List<String> list = diAnnotation.getList();
+        for (String s : list)
+            System.out.println(s);
+
+
+@Value("#{'${values}'.split(',')}")
+    private Set<String> set;
+
+    public Set<String> getSet() {
+        return set;
+    }
+<main
+    Set<String> set = diAnnotation.getSet();
+        for(String s : set)
+            System.out.println(s);
+```
+
+
+
 
 
 
