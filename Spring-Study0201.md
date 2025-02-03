@@ -18,11 +18,7 @@
            <property name="value" value="주입된 값" />
        </bean>
    ```
-
-
-   
-
-
+      
    - Annotation
  
    ```java
