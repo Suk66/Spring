@@ -63,28 +63,28 @@ INSERT INTO customer(customer_name, customer_address, customer_email)
   ```
 
   
-- orders
+ - orders
 
- ```java
-  CREATE TABLE orders (
+  ```java
+    CREATE TABLE orders (
     order_id INTEGER AUTO_INCREMENT PRIMARY KEY NOT NULL,
     customer_id INTEGER,
     order_date DATETIME DEFAULT CURRENT_TIMESTAMP,
     CONSTRAINT fk_order_customer_id FOREIGN KEY (customer_id)
     REFERENCES customer (customer_id)
     ON DELETE CASCADE
-  );
+  	);
 
-  INSERT INTO orders(customer_id)
+   INSERT INTO orders(customer_id)
 	VALUES (1), (2), (3), (4), (5);
 
 
-  ```
+   ```
 
-  - order_item
+ - order_item
 
   ```java
-  CREATE TABLE order_item (
+   CREATE TABLE order_item (
     order_item_id INTEGER AUTO_INCREMENT PRIMARY KEY NOT NULL,
     product_id INTEGER,
     order_item_quantity INTEGER NOT NULL,
