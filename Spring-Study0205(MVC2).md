@@ -6,7 +6,8 @@
 
 
 - DispatcherServlet
+  - Tree 형태 계층 구조.
 
-  <img width="842" alt="스크린샷 2025-02-05 14 22 28" src="https://github.com/user-attachments/assets/ebc0f71d-b803-427b-aa20-a93971e64e18" />
+ 
+  <img width="1566" alt="스크린샷 2025-02-05 14 24 16" src="https://github.com/user-attachments/assets/50799bf8-3c9e-4231-a10c-7a5a71bd3cac" />
 
-  
