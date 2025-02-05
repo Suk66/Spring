@@ -5,9 +5,43 @@
 
 
 
-- DispatcherServlet
-  - Tree 형태 계층 구조.
+- ComponentScan Annotation
+  - useDefaultFilters Attribute
+    ```java
+    @ComponentScan(basepackages={"com.mycompany.ordersystem"},useDefaultFilters=false)
 
- 
-  <img width="1566" alt="스크린샷 2025-02-05 14 24 16" src="https://github.com/user-attachments/assets/50799bf8-3c9e-4231-a10c-7a5a71bd3cac" />
+    ```
+
+  - includeFilters Attribute
+     - 특정한 조건을 만족하는 것만 지정할 수 있음.
+    ```java
+    @includeFilters = {
+        @ComponentScan.Filter(type = FilterType.Annotation, classes = {Service.class, repository.class}
+    }
+    
+    ```
+
+  - excludeFilters Attribute
+    - 특정한 조건이 제시된 것만 빼고 지정하는 includeFilters의 반대 개념
+    ```java
+    @excludeFilters = {
+        @ComponentScan.Filter(type = FilterType.Annotation, classes = {Controller.class}
+    }
+
+    ```
+
+  - basePackagesClasses Attribute
+    - 지정된 클래스의 패키지와 그 하위 패키지에서 스프링빈을 찾음
+    ```java
+    @basePackageClasses = {CustomerService.class, Repository.class
+    }
+
+    lazyinit = true     //
+
+    ```
+
+    
+  
+
+    
 
