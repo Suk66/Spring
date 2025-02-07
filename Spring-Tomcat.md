@@ -97,6 +97,7 @@ webapp
           <groupId>javax.servlet</groupId>
           <artifactId>javax.servlet-api</artifactId>
           <version>4.0.1</version>
+          // 톰캣에서 자체 적으로 api를 제공하기 때문에 provided로 실행하지 않게 해놓음.
           <scope>provided</scope>
         </dependency>
 
@@ -108,6 +109,7 @@ webapp
     </dependency>
 
     <!-- JSP Support -->
+    // 톰캣에서 JSP를 뛰우는 역활을 담당.
     <dependency>
       <groupId>org.apache.tomcat.embed</groupId>
       <artifactId>tomcat-embed-jasper</artifactId>
