@@ -102,7 +102,7 @@
   
   @Configuration
   @EnableWebMvc
-  //@ComponentScan(basePackages = "com.mycompany")  // 이요소 필요없음.
+  //@ComponentScan(basePackages = "com.mycompany")  // ???????
   public class WebConfig implements WebMvcConfigurer {
 
     @Override
@@ -118,6 +118,34 @@
   }
   
   ```
+
+  - com.mycompany - controller
+  ```java
+  import org.springframework.stereotype.Controller;
+  import org.springframework.web.bind.annotation.GetMapping;
+  
+  @Controller
+  public class HomeController {
+      @GetMapping("/")
+      public String home(){
+          return "/static/index";
+  
+      }
+  }
+  ```
+  
+
+  - src - main - webapp
+    ```java
+    <!DOCTYPE web-app PUBLIC
+     "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+     "http://java.sun.com/dtd/web-app_2_3.dtd" >
+  
+      <web-app>
+        <display-name>Archetype Created Web Application</display-name>
+      </web-app>
+      ```
+
 
 
 
